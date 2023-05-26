@@ -9,28 +9,73 @@ window.onload = function () {
       let articles = data.articles
       console.log(articles)
 
-      let postsWrapper = document.getElementById('posts-wrapper')
-
-      let author = document.getElementById('author')
+      let postsWrapper = document.getElementById('post')
 
       articles.forEach((article) => {
-        // author.textContent = article.title
-        // let body = document.body
-        // let postItem = document.createElement('div');
-        // body.appendChild(postItem);
-        let paragraph = document.createElement('p')
-        paragraph.textContent = article.author || "Anonymous Author"
-        paragraph.classList.add('text-danger')
+        let postGrid = document.createElement('div')
+        postGrid.classList.add('posts-grid', 'w-dyn-items')
 
+        let postItem = document.createElement('div')
+        postItem.classList.add('post-item', 'w-dyn-item')
+
+        let postLink = document.createElement('a')
+        postLink.setAttribute('aria-label', 'Blog post link')
+        postLink.href = article.url
+        postLink.classList.add('post-link', 'w-inline-block')
+
+        let authors = document.createElement('p')
+        authors.textContent = article.author || 'Anonymous Author'
+        authors.classList.add('text-danger')
+
+        let postTextWrapper = document.createElement('div')
+        postTextWrapper.classList.add('post-text-wrapper')
+
+        let bottom = document.createElement('div')
+        bottom.classList.add('bottom')
+
+        let heading = document.createElement('h2')
+        heading.classList.add('heading', 'medium')
+        heading.textContent = article.title
+
+        let textWrapper = document.createElement('div')
+        textWrapper.classList.add('text-color-4')
+
+        let paragraph = document.createElement('div')
+        paragraph.classList.add('paragraph')
+        paragraph.textContent = article.description
+
+        bottom.appendChild(heading)
+        textWrapper.appendChild(paragraph)
+        bottom.appendChild(textWrapper)
+
+        postTextWrapper.appendChild(bottom)
+
+        postsWrapper.appendChild(postGrid)
+        postsWrapper.appendChild(postItem)
+        postsWrapper.appendChild(postLink)
+        postsWrapper.appendChild(authors)
+        postsWrapper.appendChild(postTextWrapper)
+        postsWrapper.appendChild(bottom)
+        postsWrapper.appendChild(heading)
+        postsWrapper.appendChild(textWrapper)
         postsWrapper.appendChild(paragraph)
-        // paragraph.innerHTML(article.author)
-        // postItem.appendChild(paragraph)
-        // postItem.classList.add('post-link', 'w-dyn-item');
 
-        // let postLink = document.createElement('a');
-        // postLink.setAttribute('aria-label', 'Blog post link');
-        // postLink.href = article.url;
-        // postLink.classList.add('post-link', 'w-inline-block');
+        let postItemImageWrapper = document.createElement('div')
+        postItemImageWrapper.classList.add('post-item-image-wrapper')
+
+        let postItemImage = document.createElement('img')
+        postItemImage.src = article.urlToImage
+        postItemImage.loading = 'lazy'
+        postItemImage.alt = article.title
+        postItemImage.classList.add('post-item-image')
+
+        postItemImageWrapper.appendChild(postItemImage)
+        postLink.appendChild(postItemImageWrapper)
+        postItem.appendChild(postLink)
+        postsWrapper.appendChild(postItem)
       })
+    })
+    .catch((error) => {
+      console.log('Ocorreu um erro: ', error)
     })
 }
