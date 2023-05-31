@@ -1,5 +1,4 @@
 # Tech-News
-#### Video Demo:  <URL https://www.youtube.com/watch?v=bNEvBDEXKt8>
 #### Description: I started the project with HTML. First, I added all the libraries I would need, such as Bootstrap, Font Awesome, and some others that were necessary to make the website complete. After that, I began working on the nav-bar section, where I added the site name "Tech News" and the "about" button. Once the nav-bar section was ready, I worked on the heading section, where I added a title "Trending Topics" and a paragraph. 
 After completing these two parts, I created a div to contain all the main content, the news, and within this div, JavaScript was responsible for implementing the necessary elements to load the news into the HTML and the main page of the website.
 To finish the HTML, I created a footer section that contains a description of the site and my social media links. 
