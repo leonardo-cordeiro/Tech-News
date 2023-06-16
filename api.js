@@ -17,7 +17,7 @@ window.onload = function () {
       scrollUpButton.style.display = 'none'
     }
   })
-  
+
   fetch(url)
     .then((response) => {
       return response.json()
