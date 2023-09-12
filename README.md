@@ -1,2 +1,50 @@
 # Tech-News
-#### Description: I started the project with HTML. First, I added all the libraries I would need, such as Bootstrap, Font Awesome, and some others that were necessary to make the website complete. After that, I began working on the nav-bar section, where I added the site name "Tech News" and the "about" button. Once the nav-bar section was ready, I worked on the heading section, where I added a title "Trending Topics" and a paragraph. After completing these two parts, I created a div to contain all the main content, the news, and within this div, JavaScript was responsible for implementing the necessary elements to load the news into the HTML and the main page of the website.To finish the HTML, I created a footer section that contains a description of the site and my social media links. Additionally, I added a button with the "scrollUp" function from JavaScript, and the "About" button in the nav-bar, when clicked, it goes directly to the footer section where the site's description is located. Once the HTML was completed, I moved on to JavaScript. Firstly, when the window is loaded, the code is automatically triggered. It starts by making a request to a news API, specifically to get the top technology highlights in the United States. Next, the code interacts with the scroll-up button element present on the page. When the user clicks this button, the code is triggered again, resulting in a smooth scroll to the top of the page. The code also monitors the scroll event of the window. If the user scrolls the page more than 200 pixels vertically, the scroll-up button will be displayed, allowing the user to easily return to the top of the page. Otherwise, the button remains hidden. After that, the code proceeds to fetch the news data from the API. It uses the "fetch()" method to make the request. Then, the data is converted to JSON format and manipulated. The data manipulation includes filtering the articles to exclude those without an associated image. Then, the first six articles are selected to be displayed. In a loop, the code dynamically creates HTML elements for each selected article.The elements are configured with relevant information such as title, author, date, description, and image. These elements are properly nested in the page structure, allowing them to be displayed appropriately. Finally, if there is an error during the request or data manipulation process, the code captures and displays the error in the console. In summary, this JavaScript code is responsible for fetching and displaying technology news highlights on a web page. It interacts with page elements like the scroll-up button to provide an enhanced user experience. Additionally, the code demonstrates skills in using API requests, data manipulation, and dynamic creation of HTML elements. To finalize, I styled the footer section with CSS, as well as the scroll-up button, and used Bootstrap to style the other parts of the website.
+
+## Description
+
+Tech-News is a web project that provides users with the latest technology highlights in the United States. The project was developed from scratch, starting with HTML and progressively adding libraries and functionality to create a complete website.
+
+### Project Development Steps:
+
+1. **HTML Structure:**
+   - Started with the basic HTML structure.
+   - Added necessary libraries such as Bootstrap, Font Awesome, and others to enhance the website's design and functionality.
+
+2. **Nav-Bar Section:**
+   - Created the navigation bar section with the site name "Tech News" and an "About" button.
+
+3. **Heading Section:**
+   - Developed the heading section, which includes a title "Trending Topics" and a descriptive paragraph.
+
+4. **Main Content and News:**
+   - Created a div to contain all the main content, including the news.
+   - Utilized JavaScript to load the news dynamically into the HTML, making the website's main page dynamic and up-to-date.
+
+5. **Footer Section:**
+   - Designed a footer section that contains a description of the site and links to social media profiles.
+   - Added a "scrollUp" button, implemented in JavaScript, for smoother navigation to the top of the page.
+   - Enhanced user experience by linking the "About" button in the nav-bar to the footer section, providing quick access to the site's description.
+
+6. **JavaScript Functionality:**
+   - Utilized JavaScript to fetch data from a news API, specifically obtaining the top technology highlights in the United States.
+   - Implemented a scroll-up button that appears when the user scrolls down and allows for easy navigation to the top of the page.
+   - Monitored the window scroll event and displayed/hid the scroll-up button accordingly.
+   - Manipulated the fetched data, including filtering articles without images and selecting the first six articles for display.
+   - Dynamically created HTML elements for each selected article, populating them with relevant information like title, author, date, description, and image.
+   - Handled errors during API requests or data manipulation, providing error messages in the console.
+
+7. **CSS Styling:**
+   - Styled the footer section and scroll-up button using CSS.
+   - Utilized Bootstrap to style other parts of the website, ensuring a visually appealing and responsive design.
+
+In summary, Tech-News is a web project that showcases skills in web development, including HTML structure, JavaScript functionality, API integration, data manipulation, and dynamic HTML element creation. It aims to deliver the latest technology news in an engaging and user-friendly manner, while also providing a well-designed and responsive interface.
+
+## Usage
+
+To use Tech-News, simply access the website in your web browser. You can scroll through the latest technology news, click on articles for more information, and easily navigate back to the top of the page using the scroll-up button.
+
+## Contributors
+
+- Leonardo Cordeiro
+
+
